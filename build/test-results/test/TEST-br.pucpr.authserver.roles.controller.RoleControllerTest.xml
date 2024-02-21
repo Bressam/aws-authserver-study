@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.pucpr.authserver.roles.controller.RoleControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-02-21T03:44:03" hostname="Giovannes-Mac-mini-M2.local" time="0.011">
+  <properties/>
+  <testcase name="insert must return the new role with CREATED code()" classname="br.pucpr.authserver.roles.controller.RoleControllerTest" time="0.008"/>
+  <testcase name="list should return all found roles()" classname="br.pucpr.authserver.roles.controller.RoleControllerTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.pucpr.authserver.users.SortDirTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-02-21T03:44:03" hostname="Giovannes-Mac-mini-M2.local" time="0.012">
+  <properties/>
+  <testcase name="[1] value=ASC" classname="br.pucpr.authserver.users.SortDirTest" time="0.007"/>
+  <testcase name="[2] value=asc" classname="br.pucpr.authserver.users.SortDirTest" time="0.001"/>
+  <testcase name="[3] value=Asc" classname="br.pucpr.authserver.users.SortDirTest" time="0.0"/>
+  <testcase name="findOrThrow must throw BadRequestException if an invalid value is provided()" classname="br.pucpr.authserver.users.SortDirTest" time="0.0"/>
+  <testcase name="[1] value=DESC" classname="br.pucpr.authserver.users.SortDirTest" time="0.0"/>
+  <testcase name="[2] value=desc" classname="br.pucpr.authserver.users.SortDirTest" time="0.0"/>
+  <testcase name="[3] value=Desc" classname="br.pucpr.authserver.users.SortDirTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

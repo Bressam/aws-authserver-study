@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.pucpr.authserver.roles.controller.responses.RoleResponseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-21T03:44:03" hostname="Giovannes-Mac-mini-M2.local" time="0.0">
+  <properties/>
+  <testcase name="constructor should copy all important values()" classname="br.pucpr.authserver.roles.controller.responses.RoleResponseTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
