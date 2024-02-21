@@ -11,12 +11,14 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.context.annotation.Bean
 import org.springframework.data.domain.Sort
 import org.springframework.stereotype.Service
+import org.springframework.web.multipart.MultipartFile
 import kotlin.jvm.optionals.getOrNull
 
 @Service
 class UserService(
     val repository: UserRepository,
     val roleRepository: RoleRepository,
+    val avatarService: AvatarService,
     val jwt: Jwt
 ) {
     fun insert(user: User): User {
@@ -76,11 +78,18 @@ class UserService(
         log.info("User logged in. id={}, name={}", user.id, user.name)
         return LoginResponse(
             token = jwt.createToken(user),
-            user = UserResponse(user)
+            user = toResponse(user)
         )
     }
 
+    fun saveAvatar(id: Long, avatar: MultipartFile) {
+        val user = findByIdOrThrow(id)
+        user.avatar = avatarService.save(user, avatar)
+        repository.save(user)
+    }
 
+    fun toResponse(user: User) =
+        UserResponse(user, avatarService.urlFor(user.avatar))
 
     companion object {
         private val log = LoggerFactory.getLogger(UserService::class.java)
