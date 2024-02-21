@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.pucpr.authserver.users.UserServiceTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2024-02-21T03:44:04" hostname="Giovannes-Mac-mini-M2.local" time="0.121">
+  <properties/>
+  <testcase name="login should return the login response if credentials are correct()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.028"/>
+  <testcase name="findAll should request an descending list if SortDir DESC is used()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="findAll should request an ascending list if SortDir ASC is used()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="login should return null if the password is wrong()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="update must return null if there's no changes()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.029"/>
+  <testcase name="addRole should return FALSE if the user already have the role()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="addRole should throw BadRequestException if the role does not exist()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.002"/>
+  <testcase name="update must throw NotFoundException if the user does not exists()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="findByIdOrNull should delegate to repository()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="addRole should return TRUE and save the user()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.003"/>
+  <testcase name="insert must throw BadRequestException if an user with the same email is found()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.0"/>
+  <testcase name="delete must call delete and return true if the user exists()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.02"/>
+  <testcase name="delete should throw a BadRequestException if the user is the last admin()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.017"/>
+  <testcase name="addRole should throw NotFoundException if the user does not exists()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="findByRole must delegate to the repository()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.0"/>
+  <testcase name="update update and save the user with slot and capture()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="update update and save the user with answers()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="insert must return the saved user if it's inserted()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="delete must return false if the user does not exists()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <testcase name="login should return null if the user is not found()" classname="br.pucpr.authserver.users.UserServiceTest" time="0.001"/>
+  <system-out><![CDATA[2024-02-21T00:44:04.029-03:00  INFO 21944 --- [    Test worker] br.pucpr.authserver.users.UserService    : User logged in. id=1, name=user
+2024-02-21T00:44:04.071-03:00  INFO 21944 --- [    Test worker] br.pucpr.authserver.users.UserService    : Granted role ADMIN to user 1
+2024-02-21T00:44:04.095-03:00  INFO 21944 --- [    Test worker] br.pucpr.authserver.users.UserService    : User deleted: 1
+2024-02-21T00:44:04.120-03:00  INFO 21944 --- [    Test worker] br.pucpr.authserver.users.UserService    : User inserted: 1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

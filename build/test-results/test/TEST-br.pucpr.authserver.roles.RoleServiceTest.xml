@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.pucpr.authserver.roles.RoleServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-02-21T03:44:03" hostname="Giovannes-Mac-mini-M2.local" time="0.158">
+  <properties/>
+  <testcase name="insert must throw BadRequestException if a role with the same name is found()" classname="br.pucpr.authserver.roles.RoleServiceTest" time="0.062"/>
+  <testcase name="findAll should delegate to repository sorting by name()" classname="br.pucpr.authserver.roles.RoleServiceTest" time="0.088"/>
+  <testcase name="insert must return the saved role if it's inserted()" classname="br.pucpr.authserver.roles.RoleServiceTest" time="0.005"/>
+  <system-out><![CDATA[2024-02-21T00:44:03.876-03:00  INFO 21944 --- [    Test worker] br.pucpr.authserver.roles.RoleService    : Role inserted: USER
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
