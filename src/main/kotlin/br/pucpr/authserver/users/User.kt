@@ -26,6 +26,8 @@ class User(
 
     var name: String = "",
 
+    var avatar: String = AvatarService.DEFAULT_AVATAR,
+
     @ManyToMany
     @JoinTable(
         name="UserRole",
