@@ -25,6 +25,8 @@ class S3Storage: FileStorage {
         val transferManager = TransferManagerBuilder.standard()
             .withS3Client(s3)
             .build()
+        val bucket = if (path.startsWith("avatars"))
+            THUMBS else PUBLIC
 
         val meta = ObjectMetadata()
         meta.contentType = contentType
@@ -33,19 +35,20 @@ class S3Storage: FileStorage {
         meta.userMetadata["originalFilename"] = file.originalFilename
 
         transferManager
-            .upload(BUCKET, path, file.inputStream, meta)
+            .upload(bucket, path, file.inputStream, meta)
             .waitForUploadResult()
 
         return path
     }
 
     override fun load(path: String): Resource? = InputStreamResource(
-        s3.getObject(BUCKET, path.replace("-S-", "/")).objectContent
+        s3.getObject(PUBLIC, path.replace("-S-", "/")).objectContent
     )
 
     override fun urlFor(name: String) = "https://dcwraktbwkaa5.cloudfront.net/$name"
 
     companion object {
-        private const val BUCKET = "gbressam-authserver-public"
+        private const val THUMBS = "gbressam-authserver-thumbnail"
+        private const val PUBLIC = "gbressam-authserver-public"
     }
 }
